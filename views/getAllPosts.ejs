@@ -1,0 +1,26 @@
+
+    <a href="/posts/new" class="btn btn-success">New Article</a>
+
+    <div class="container">
+        <% posts.forEach(post => { %>
+            <div class="mt-5">
+                <%= post.id %>
+            </div>
+            <div>
+                <%= post.title %>
+            </div>
+            <div>
+                <%= post.description %>
+            </div>
+            <div>
+                <%= post.markdown %>
+            </div>
+            <div>
+                <%= post.date.toLocaleDateString() %>
+            </div>
+            <a class="btn btn-primary mt-2" href="/posts/<%= post.id %>">..more</a>
+            <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="d-inline">
+                <button type="submit" class="btn btn-danger mt-2">Delete</button>
+            </form>
+        <% }) %>
+    </div>

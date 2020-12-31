@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card">
+        <div class="mt-3">
+            <%= post.id %>
+        </div>
+        <div>
+            <%= post.title %>
+        </div>
+        <div>
+            <%= post.description %>
+        </div>
+        <div>
+            <%= post.markdown %>
+        </div>
+        <div>
+            <%= post.date %>
+        </div>
+    </div>
+
+    <a href="/posts" class="btn btn-secondary mt-3">All Articles</a>
+    <a href="/posts/edit/<%= post.id %>" class="btn btn-info mt-3">Edit</a>
+
+
+</div>
